@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hector's NY Pizza — Pizzería en Carrollwood, Tampa FL</title>
+<meta name="description" content="Hector's NY Pizza en Carrollwood, Tampa: la verdadera pizza estilo New York. Pide en línea con Toast para recoger en tienda. 4439 Gunn Hwy · (813) 373-5180 · 4.8★.">
+<link rel="canonical" href="https://lmanzano86-ui.github.io/demo-hectors-ny-pizza/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hector's NY Pizza — Pizzería en Carrollwood, Tampa FL">
+<meta property="og:description" content="La verdadera pizza estilo New York en Tampa. Pide en línea con Toast: paga en línea y recoge en tienda.">
+<meta property="og:url" content="https://lmanzano86-ui.github.io/demo-hectors-ny-pizza/">
+<meta property="og:image" content="https://lmanzano86-ui.github.io/demo-hectors-ny-pizza/imgs/hero.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#191414">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍕</text></svg>">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"Hector's NY Pizza","servesCuisine":["Pizza","Italian"],"priceRange":"$","telephone":"+1-813-373-5180","email":"Hectorsnypizza@gmail.com","address":{"@type":"PostalAddress","streetAddress":"4439 Gunn Hwy","addressLocality":"Carrollwood","addressRegion":"FL","postalCode":"33618","addressCountry":"US"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"222"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday"],"opens":"11:00","closes":"21:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday"],"opens":"11:00","closes":"22:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"12:00","closes":"21:00"}],"acceptsReservations":"False"}
+</script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--rojo:#D63A2F;--rojo-os:#a9241b;--negro:#191414;--crema:#FFF8EF;--queso:#F5B301;--gris:#5c5650;--verde:#006847;--rojo-mx:#CE1126}
+body{font-family:'Segoe UI',Helvetica,Arial,sans-serif;background:var(--crema);color:var(--negro);max-width:640px;margin:0 auto;line-height:1.55}
+img{max-width:100%;display:block}
+/* mantel a cuadros como divisor */
+.cuadros{height:14px;background:repeating-conic-gradient(var(--rojo) 0 25%,#fff 0 50%) 0 0/28px 28px;border-top:2px solid var(--negro);border-bottom:2px solid var(--negro)}
+/* franja tricolor mexicana — homenaje sutil */
+.tricolor{height:7px;background:linear-gradient(90deg,var(--verde) 0%,var(--verde) 33.4%,#fff 33.4%,#fff 66.7%,var(--rojo-mx) 66.7%,var(--rojo-mx) 100%)}
+/* divisor papel picado geométrico */
+.picado{height:20px;background-color:var(--negro);background-image:radial-gradient(circle at 50% 2px,var(--verde) 8px,transparent 9px),radial-gradient(circle at 50% 2px,#fff 8px,transparent 9px),radial-gradient(circle at 50% 2px,var(--rojo-mx) 8px,transparent 9px);background-size:54px 20px;background-position:0 0,18px 0,36px 0;background-repeat:repeat-x;border-top:2px solid var(--negro);border-bottom:2px solid var(--negro)}
+/* textura talavera muy tenue */
+.nos{background-color:#fff;background-image:radial-gradient(rgba(0,104,71,.06) 1.6px,transparent 1.7px),radial-gradient(rgba(206,17,38,.05) 1.6px,transparent 1.7px);background-size:24px 24px;background-position:0 0,12px 12px}
+.orgullo{display:inline-block;margin-top:12px;background:var(--verde);color:#fff;font-weight:800;font-size:13.5px;padding:9px 18px;border-radius:24px;letter-spacing:.3px}
+.orgullo .mx{color:#ffe9a8}
+header{background:var(--negro);color:#fff;padding:14px 16px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:50}
+.logo{font-weight:900;font-size:17px;letter-spacing:.5px;white-space:nowrap;line-height:1.25}
+.logo .ny{color:var(--queso)}
+.logo small{display:block;font-size:10px;font-weight:600;letter-spacing:3px;color:#ffb3ab}
+.lang{display:flex;flex-shrink:0}
+.lang button{background:transparent;border:1.5px solid var(--queso);color:var(--queso);font-weight:700;font-size:12px;padding:6px 10px;border-radius:20px;margin-left:6px;cursor:pointer;white-space:nowrap}
+.lang button.on{background:var(--queso);color:var(--negro)}
+.hero{position:relative;color:#fff;text-align:center}
+.hero img{width:100%;height:340px;object-fit:cover;filter:brightness(.55)}
+.hero .tx{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:20px}
+.hero h1{font-size:34px;font-weight:900;text-shadow:0 2px 8px rgba(0,0,0,.6);line-height:1.15}
+.hero h1 .q{color:var(--queso)}
+.hero .stars{margin:10px 0 4px;font-size:15px}
+.hero .stars b{color:var(--queso)}
+.btns{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap;justify-content:center}
+.btn{display:inline-block;background:var(--rojo);color:#fff;font-weight:800;text-decoration:none;padding:13px 24px;border-radius:30px;font-size:15px;box-shadow:0 4px 12px rgba(0,0,0,.35)}
+.btn.alt{background:#fff;color:var(--rojo)}
+.btn.llamar{background:var(--queso);color:var(--negro)}
+section{padding:26px 18px}
+h2{font-size:23px;font-weight:900;margin-bottom:4px}
+h2 .r{color:var(--rojo)}
+.sub{color:var(--gris);font-size:14px;margin-bottom:16px}
+/* especiales */
+.especiales{background:var(--negro);color:#fff}
+.especiales h2{color:#fff}
+.especiales .sub{color:#d8cfc4}
+.ticket{background:#fff;color:var(--negro);border-radius:12px;padding:18px;margin-bottom:14px;position:relative;border-left:8px solid var(--rojo)}
+.ticket.martes{border-left-color:var(--queso)}
+.ticket.todos{border-left-color:var(--verde)}
+.ticket h3{font-size:17px;font-weight:900}
+.ticket h3 .tag{display:inline-block;background:var(--rojo);color:#fff;font-size:11px;font-weight:800;padding:3px 10px;border-radius:12px;margin-left:8px;vertical-align:middle}
+.ticket.martes h3 .tag{background:var(--queso);color:var(--negro)}
+.ticket ul{list-style:none;margin-top:10px}
+.ticket li{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px dashed #e3d9c8;font-size:14.5px}
+.ticket li:last-child{border-bottom:none}
+.ticket .p{font-weight:900;color:var(--rojo);white-space:nowrap;margin-left:10px}
+.ticket.martes .p{color:#9a6a00}
+/* menú */
+.cat{margin-bottom:20px}
+.cat h3{background:var(--rojo);color:#fff;display:inline-block;font-size:15px;font-weight:800;padding:6px 16px;border-radius:20px;margin-bottom:10px}
+.cat ul{list-style:none;background:#fff;border-radius:12px;padding:6px 16px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.cat li{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px solid #f0e7d6;font-size:14.5px}
+.cat li:last-child{border-bottom:none}
+.cat .p{font-weight:800;color:var(--rojo);white-space:nowrap}
+.nota{font-size:12px;color:var(--gris);margin-top:8px;font-style:italic}
+/* galería */
+.gal{background:#fff}
+.gal .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.gal img{border-radius:10px;height:150px;object-fit:cover;width:100%}
+.muestra{font-size:11.5px;color:var(--gris);font-style:italic;margin-top:10px;text-align:center}
+/* nosotros */
+.nos img{border-radius:12px;margin-bottom:14px}
+.nos p{margin-bottom:10px;font-size:15px}
+/* reseñas + QR */
+.qrbox{display:flex;gap:16px;align-items:center;background:#fff;border-radius:12px;padding:16px;margin-bottom:14px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.qrbox img{width:110px;height:110px;flex-shrink:0}
+.qrbox .t{font-size:14.5px}
+.qrbox .t b{display:block;font-size:16px;margin-bottom:4px}
+.stars-big{font-size:22px;color:var(--queso);letter-spacing:2px}
+/* contacto */
+.contacto{background:var(--negro);color:#fff}
+.contacto h2{color:#fff}
+.contacto .sub{color:#d8cfc4}
+.horario{background:#241d1a;border-radius:12px;padding:16px;margin-bottom:14px;font-size:14.5px}
+.horario div{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid #3a2f2a}
+.horario div:last-child{border:none}
+.dir{font-size:15px;margin:12px 0}
+.dir a{color:var(--queso);text-decoration:none;font-weight:700}
+.social{display:flex;gap:10px;margin-top:14px}
+.social a{flex:1;text-align:center;background:#2c2320;color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:12px;border-radius:10px;border:1px solid #4a3a32}
+footer{background:#100c0b;color:#8d8378;font-size:12px;text-align:center;padding:18px}
+footer b{color:var(--queso)}
+
+.pedidos{background:var(--rojo);color:#fff;text-align:center}
+.pedidos h2{color:#fff}
+.pedidos p{font-size:15px;max-width:520px;margin:0 auto 8px}
+.pedidos .btn{background:#fff;color:var(--rojo);margin-top:10px}
+.pedidos .nota2{font-size:12.5px;color:#ffd9d4;font-style:italic;margin-top:12px}
+.barra{position:fixed;left:50%;transform:translateX(-50%);bottom:0;width:100%;max-width:640px;background:rgba(16,12,11,.97);padding:10px 14px;z-index:60;display:flex;gap:10px;box-shadow:0 -4px 14px rgba(0,0,0,.3)}
+.barra a{flex:1;text-align:center;font-size:13.5px;padding:12px 8px}
+.barra a.llamar{flex:0 0 auto}
+body{padding-bottom:66px}
+</style>
+</head>
+<body>
+
+
+<header>
+  <div class="logo">HECTOR'S <span class="ny">NY</span> PIZZA<small data-es="CARROLLWOOD · TAMPA" data-en="CARROLLWOOD · TAMPA">CARROLLWOOD · TAMPA</small></div>
+  <div class="lang"><button id="bEs" class="on" onclick="setLang('es')">ES</button><button id="bEn" onclick="setLang('en')">EN</button></div>
+</header>
+<style>.logobanner{background:#15151c;text-align:center;line-height:0}.logobanner img{width:100%;max-width:640px;height:auto;display:inline-block}</style>
+<div class="logobanner"><img src="imgs/logo-hectors.jpg" alt="Hector's NY Pizzas"></div>
+
+<div class="tricolor"></div>
+
+<div class="hero">
+  <img width="1024" height="683" src="imgs/hero.webp" alt="Pizza estilo New York">
+  <div class="tx">
+    <h1 data-es="La verdadera pizza estilo <span class='q'>New York</span> en Tampa" data-en="Real <span class='q'>New York</span> style pizza in Tampa">La verdadera pizza estilo <span class="q">New York</span> en Tampa</h1>
+    <div class="stars"><b>★★★★★</b> <span data-es="4.8 · 222 reseñas en Google" data-en="4.8 · 222 Google reviews">4.8 · 222 reseñas en Google</span></div>
+    <div class="btns">
+      <a class="btn" href="https://www.toasttab.com/local/order/hectorsnypizza" target="_blank" rel="noopener" data-es="🛒 Pide en línea y recoge en tienda" data-en="🛒 Order online & pick up in store">🛒 Pide en línea y recoge en tienda</a>
+      <a class="btn llamar" href="tel:+18133735180" data-es="📞 Llamar ahora" data-en="📞 Call now">📞 Llamar ahora</a>
+      <a class="btn alt" href="https://maps.app.goo.gl/zV2WWoWPCMXag2rs6" data-es="📍 Cómo llegar" data-en="📍 Get directions">📍 Cómo llegar</a>
+    </div>
+  </div>
+</div>
+<div class="cuadros"></div>
+
+<section class="especiales">
+  <h2 data-es="🔥 <span class='r'>Especiales</span> de la casa" data-en="🔥 House <span class='r'>Specials</span>">🔥 <span class="r">Especiales</span> de la casa</h2>
+  <p class="sub" data-es="Los favoritos de nuestros clientes, todos los días." data-en="Our customers' favorites, every day.">Los favoritos de nuestros clientes, todos los días.</p>
+
+  <div class="ticket martes">
+    <h3><span data-es="Especiales de los martes" data-en="Tuesday Specials">Especiales de los martes</span><span class="tag" data-es="SOLO MARTES" data-en="TUESDAYS ONLY">SOLO MARTES</span></h3>
+    <ul>
+      <li><span data-es="Calzone (martes)" data-en="Calzone (Tuesday)">Calzone (martes)</span><span class="p">$10.99</span></li>
+      <li><span data-es="Stromboli (martes)" data-en="Stromboli (Tuesday)">Stromboli (martes)</span><span class="p">$10.99</span></li>
+      <li><span data-es="Rollo de pollo (martes)" data-en="Chicken roll (Tuesday)">Rollo de pollo (martes)</span><span class="p">$10.99</span></li>
+      <li><span data-es="Rollo de pepperoni (martes)" data-en="Pepperoni roll (Tuesday)">Rollo de pepperoni (martes)</span><span class="p">$10.99</span></li>
+      <li><span data-es="Pizza de queso 16&quot; (martes)" data-en='16" cheese pizza (Tuesday)'>Pizza de queso 16" (martes)</span><span class="p">$14.99</span></li>
+    </ul>
+  </div>
+
+  <div class="ticket todos">
+    <h3><span data-es="Especiales todos los días" data-en="Everyday Specials">Especiales todos los días</span><span class="tag" data-es="TODOS LOS DÍAS" data-en="EVERY DAY">TODOS LOS DÍAS</span></h3>
+    <ul>
+      <li><span data-es="2 rebanadas de queso + bebida" data-en="2 cheese slices + drink">2 rebanadas de queso + bebida</span><span class="p">$6.99</span></li>
+      <li><span data-es='Pizza grande 16" de 1 ingrediente + 10 alitas' data-en='Large 16" 1-topping pizza + 10 wings'>Pizza grande 16" de 1 ingrediente + 10 alitas</span><span class="p">$28.99</span></li>
+    </ul>
+  </div>
+</section>
+<div class="cuadros"></div>
+
+<section class="pedidos">
+  <h2 data-es="🛒 Pide en línea con <span style='color:var(--queso)'>Toast</span>" data-en="🛒 Order online with <span style='color:var(--queso)'>Toast</span>">🛒 Pide en línea con <span style="color:var(--queso)">Toast</span></h2>
+  <p data-es="Haz tu pedido para recoger en tienda: elige tus pizzas, paga en línea y tu orden entra directo a nuestra cocina." data-en="Order ahead for pickup: pick your pizzas, pay online, and your order goes straight to our kitchen.">Haz tu pedido para recoger en tienda: elige tus pizzas, paga en línea y tu orden entra directo a nuestra cocina.</p>
+  <a class="btn" href="https://www.toasttab.com/local/order/hectorsnypizza" target="_blank" rel="noopener" data-es="🛒 Pide en línea y recoge en tienda" data-en="🛒 Order online & pick up in store">🛒 Pide en línea y recoge en tienda</a>
+  <p class="nota2" data-es="Sin comisiones de terceros: pides directo al restaurante." data-en="No third-party fees: you order straight from the restaurant.">Sin comisiones de terceros: pides directo al restaurante.</p>
+</section>
+<div class="cuadros"></div>
+
+<section>
+  <h2 data-es="Nuestro <span class='r'>menú</span>" data-en="Our <span class='r'>menu</span>">Nuestro <span class="r">menú</span></h2>
+  <p class="sub" data-es="Precios de nuestro menú en Toast." data-en="Prices from our Toast menu.">Precios de nuestro menú en Toast.</p>
+
+  <div class="cat"><h3 data-es="Pizzas" data-en="Pizzas">Pizzas</h3><ul>
+    <li><span data-es="Pizza de queso" data-en="Cheese pizza">Pizza de queso</span><span class="p">$11.99</span></li>
+    <li><span data-es="Siciliana" data-en="Sicilian">Siciliana</span><span class="p">$21.99</span></li>
+    <li><span data-es="De coliflor" data-en="Cauliflower">De coliflor</span><span class="p">$13.49</span></li>
+  </ul></div>
+
+  <div class="cat"><h3 data-es="Pizzas especiales · $13.99" data-en="Specialty pizzas · $13.99">Pizzas especiales · $13.99</h3><ul>
+    <li><span>Margherita · Hawaiian ($12.99) · Veggie · Meat Lovers</span></li>
+    <li><span>Supreme · Florentine · Chicken Alfredo</span></li>
+    <li><span>Buffalo Chicken · BBQ Chicken · Bacon Chicken Ranch</span></li>
+    <li><span>Philly Steak · White</span></li>
+  </ul></div>
+
+  <div class="cat"><h3 data-es="Calzones y strombolis" data-en="Calzones & strombolis">Calzones y strombolis</h3><ul>
+    <li><span>Calzone</span><span class="p">$14.49</span></li>
+    <li><span>Stromboli</span><span class="p">$14.49</span></li>
+    <li><span data-es="Rollo de pollo" data-en="Chicken roll">Rollo de pollo</span><span class="p">$13.49</span></li>
+    <li><span data-es="Rollo de pepperoni" data-en="Pepperoni roll">Rollo de pepperoni</span><span class="p">$12.99</span></li>
+  </ul></div>
+
+  <div class="cat"><h3 data-es="Aperitivos" data-en="Appetizers">Aperitivos</h3><ul>
+    <li><span data-es="Nudos de ajo" data-en="Garlic knots">Nudos de ajo</span><span class="p">$0.99 c/u</span></li>
+    <li><span data-es="Palitos de mozzarella fritos" data-en="Fried mozzarella sticks">Palitos de mozzarella fritos</span><span class="p">$7.99</span></li>
+    <li><span data-es="Papas fritas" data-en="French fries">Papas fritas</span><span class="p">$4.99</span></li>
+    <li><span data-es="Papas con queso y tocino" data-en="Cheese bacon fries">Papas con queso y tocino</span><span class="p">$7.99</span></li>
+    <li><span data-es="Aros de cebolla" data-en="Onion rings">Aros de cebolla</span><span class="p">$5.99</span></li>
+    <li><span data-es="Jalapeños rellenos" data-en="Jalapeño poppers">Jalapeños rellenos</span><span class="p">$7.99</span></li>
+    <li><span data-es="Champiñones fritos" data-en="Fried mushrooms">Champiñones fritos</span><span class="p">$7.99</span></li>
+    <li><span data-es="Tenders de pollo con papas" data-en="Chicken tenders & fries">Tenders de pollo con papas</span><span class="p">$9.99</span></li>
+    <li><span data-es="Pan de ajo" data-en="Garlic bread">Pan de ajo</span><span class="p">$4.99</span></li>
+    <li><span data-es="Pan de ajo con queso" data-en="Cheesy garlic bread">Pan de ajo con queso</span><span class="p">$6.48</span></li>
+    <li><span data-es="Albóndigas" data-en="Meatballs">Albóndigas</span><span class="p">$8.99</span></li>
+  </ul></div>
+
+  <div class="cat"><h3 data-es="Alitas" data-en="Wings">Alitas</h3><ul>
+    <li><span data-es="Alitas con hueso (10)" data-en="Bone-in wings (10)">Alitas con hueso (10)</span><span class="p">$13.99</span></li>
+    <li><span data-es="Alitas deshuesadas (10)" data-en="Boneless wings (10)">Alitas deshuesadas (10)</span><span class="p">$12.99</span></li>
+  </ul></div>
+
+  <div class="cat"><h3 data-es="Subs calientes" data-en="Hot subs">Subs calientes</h3><ul>
+    <li><span>Philly Steak</span><span class="p">$11.49</span></li>
+    <li><span data-es="Albóndiga parmesana" data-en="Meatball parmigiana">Albóndiga parmesana</span><span class="p">$10.99</span></li>
+    <li><span data-es="Pollo parmesano" data-en="Chicken parmigiana">Pollo parmesano</span><span class="p">$10.99</span></li>
+    <li><span data-es="Berenjena parmesana" data-en="Eggplant parmigiana">Berenjena parmesana</span><span class="p">$10.99</span></li>
+    <li><span data-es="Pollo búfalo" data-en="Buffalo chicken">Pollo búfalo</span><span class="p">$10.99</span></li>
+  </ul></div>
+
+  <div class="cat"><h3 data-es="Subs fríos" data-en="Cold subs">Subs fríos</h3><ul>
+    <li><span data-es="Italiano" data-en="Italian">Italiano</span><span class="p">$11.49</span></li>
+    <li><span>Club</span><span class="p">$10.99</span></li>
+    <li><span data-es="Jamón y provolone" data-en="Ham & provolone">Jamón y provolone</span><span class="p">$10.99</span></li>
+    <li><span data-es="Pavo y provolone" data-en="Turkey & provolone">Pavo y provolone</span><span class="p">$10.99</span></li>
+  </ul></div>
+
+  <div class="cat"><h3 data-es="Pastas" data-en="Pastas">Pastas</h3><ul>
+    <li><span data-es="Espagueti marinara" data-en="Spaghetti marinara">Espagueti marinara</span><span class="p">$8.99</span></li>
+    <li><span data-es="Espagueti con albóndigas" data-en="Spaghetti & meatballs">Espagueti con albóndigas</span><span class="p">$11.99</span></li>
+    <li><span data-es="Ziti al horno" data-en="Baked ziti">Ziti al horno</span><span class="p">$11.99</span></li>
+    <li><span data-es="Fettuccine alfredo" data-en="Fettuccine alfredo">Fettuccine alfredo</span><span class="p">$11.99</span></li>
+    <li><span data-es="Fettuccine alfredo con pollo" data-en="Chicken fettuccine alfredo">Fettuccine alfredo con pollo</span><span class="p">$14.99</span></li>
+    <li><span data-es="Berenjena parmesana" data-en="Eggplant parmigiana">Berenjena parmesana</span><span class="p">$12.99</span></li>
+    <li><span data-es="Pollo parmesano" data-en="Chicken parmigiana">Pollo parmesano</span><span class="p">$13.99</span></li>
+    <li><span data-es="Lasaña de carne" data-en="Meat lasagna">Lasaña de carne</span><span class="p">$13.99</span></li>
+    <li><span data-es="Camarones scampi" data-en="Shrimp scampi">Camarones scampi</span><span class="p">$13.99</span></li>
+  </ul></div>
+
+  <div class="cat"><h3 data-es="Ensaladas" data-en="Salads">Ensaladas</h3><ul>
+    <li><span data-es="De la casa" data-en="House">De la casa</span><span class="p">$8.99</span></li>
+    <li><span data-es="César" data-en="Caesar">César</span><span class="p">$9.49</span></li>
+    <li><span>Caprese</span><span class="p">$11.49</span></li>
+    <li><span>Antipasto</span><span class="p">$11.49</span></li>
+    <li><span data-es="Del chef" data-en="Chef">Del chef</span><span class="p">$11.49</span></li>
+    <li><span data-es="De pollo a la parrilla" data-en="Grilled chicken">De pollo a la parrilla</span><span class="p">$11.99</span></li>
+  </ul></div>
+
+  <div class="cat"><h3 data-es="Postres" data-en="Desserts">Postres</h3><ul>
+    <li><span>Cannoli</span><span class="p">$4.99</span></li>
+    <li><span data-es="Nudos de canela" data-en="Cinnamon knots">Nudos de canela</span><span class="p">$4.99</span></li>
+    <li><span>Zeppoles</span><span class="p">$4.99</span></li>
+    <li><span data-es="Cheesecake estilo NY" data-en="New York cheesecake">Cheesecake estilo NY</span><span class="p">$4.99</span></li>
+    <li><span data-es="Pastel de chocolate" data-en="Chocolate cake">Pastel de chocolate</span><span class="p">$4.99</span></li>
+    <li><span>Tiramisú</span><span class="p">$4.99</span></li>
+    <li><span data-es="Cheesecake remolino de Oreo" data-en="Oreo swirl cheesecake">Cheesecake remolino de Oreo</span><span class="p">$4.99</span></li>
+  </ul></div>
+
+  <div class="btns" style="margin-top:18px">
+    <a class="btn" href="https://www.toasttab.com/local/order/hectorsnypizza" target="_blank" rel="noopener" data-es="🛒 Pide en línea y recoge en tienda" data-en="🛒 Order online & pick up in store">🛒 Pide en línea y recoge en tienda</a>
+    <a class="btn llamar" href="tel:+18133735180" data-es="📞 Ordena por teléfono" data-en="📞 Order by phone">📞 Ordena por teléfono</a>
+  </div>
+</section>
+<div class="cuadros"></div>
+
+<section class="gal">
+  <h2 data-es="La <span class='r'>experiencia</span>" data-en="The <span class='r'>experience</span>">La <span class="r">experiencia</span></h2>
+  <p class="sub" data-es="Sabor de barrio, ambiente de familia." data-en="Neighborhood flavor, family atmosphere.">Sabor de barrio, ambiente de familia.</p>
+  <div class="grid">
+    <img width="1024" height="683" loading="lazy" src="imgs/appetizers.webp" alt="Aperitivos">
+    <img width="1024" height="683" loading="lazy" src="imgs/calzone.webp" alt="Calzone">
+    <img width="1024" height="683" loading="lazy" src="imgs/local.webp" alt="Nuestro local">
+    <img width="1024" height="683" loading="lazy" src="imgs/hero.webp" alt="Pizza">
+  </div>
+  <p class="muestra" data-es="* Fotos de muestra para el demo." data-en="* Sample photos for the demo.">* Fotos de muestra para el demo.</p>
+</section>
+<div class="picado"></div>
+
+<section class="nos">
+  <h2 data-es="Nuestra <span class='r'>historia</span>" data-en="Our <span class='r'>story</span>">Nuestra <span class="r">historia</span></h2>
+  <p class="sub" data-es="Pizzería de barrio en Greater Carrollwood." data-en="Neighborhood pizzeria in Greater Carrollwood.">Pizzería de barrio en Greater Carrollwood.</p>
+  <img width="1024" height="683" loading="lazy" src="imgs/local.webp" alt="Hector's NY Pizza">
+  <p data-es="En Hector's NY Pizza traemos el auténtico sabor de Nueva York a Carrollwood: masa fresca todos los días, salsa de tomate con receta de la casa y queso mozzarella derretido a la perfección. Pizzas, calzones, pastas, subs y alitas — con especiales que cuidan tu bolsillo." data-en="At Hector's NY Pizza we bring authentic New York flavor to Carrollwood: fresh dough daily, house-recipe tomato sauce and perfectly melted mozzarella cheese. Pizzas, calzones, pastas, subs and wings — with specials that are easy on your wallet.">En Hector's NY Pizza traemos el auténtico sabor de Nueva York a Carrollwood: masa fresca todos los días, salsa de tomate con receta de la casa y queso mozzarella derretido a la perfección. Pizzas, calzones, pastas, subs y alitas — con especiales que cuidan tu bolsillo.</p>
+  <span class="orgullo" data-es="Hecho con <span class='mx'>orgullo mexicano</span> en Tampa 🇲🇽" data-en="Made with <span class='mx'>Mexican pride</span> in Tampa 🇲🇽">Hecho con <span class="mx">orgullo mexicano</span> en Tampa 🇲🇽</span>
+</section>
+<div class="cuadros"></div>
+
+<section>
+  <h2 data-es="Lo que dicen <span class='r'>nuestros clientes</span>" data-en="What our <span class='r'>customers</span> say">Lo que dicen <span class="r">nuestros clientes</span></h2>
+  <p class="sub"><span class="stars-big">★★★★★</span> <b>4.8</b> · <span data-es="222 reseñas en Google" data-en="222 Google reviews">222 reseñas en Google</span></p>
+  <div class="qrbox">
+    <img width="300" height="300" loading="lazy" src="qr/resena.png" alt="QR reseña">
+    <div class="t"><b data-es="¿Te gustó? ¡Cuéntalo!" data-en="Enjoyed it? Tell us!">¿Te gustó? ¡Cuéntalo!</b><span data-es="Escanea el código y déjanos tu reseña en Google." data-en="Scan the code and leave us a Google review.">Escanea el código y déjanos tu reseña en Google.</span></div>
+  </div>
+  <div class="qrbox">
+    <img width="300" height="300" loading="lazy" src="qr/ubicacion.png" alt="QR ubicación">
+    <div class="t"><b data-es="Encuéntranos fácil" data-en="Find us easily">Encuéntranos fácil</b><span data-es="Escanea para abrir nuestra ubicación en Google Maps." data-en="Scan to open our location in Google Maps.">Escanea para abrir nuestra ubicación en Google Maps.</span></div>
+  </div>
+</section>
+<div class="cuadros"></div>
+
+<section class="contacto">
+  <h2 data-es="Visítanos o <span class='r'>ordena</span>" data-en="Visit us or <span class='r'>order</span>">Visítanos o <span class="r">ordena</span></h2>
+  <p class="sub" data-es="Estamos en Gunn Hwy, en el corazón de Carrollwood." data-en="We're on Gunn Hwy, in the heart of Carrollwood.">Estamos en Gunn Hwy, en el corazón de Carrollwood.</p>
+  <div class="horario">
+    <div><span data-es="Lunes" data-en="Monday">Lunes</span><span data-es="Cerrado" data-en="Closed">Cerrado</span></div>
+    <div><span data-es="Martes – Jueves" data-en="Tuesday – Thursday">Martes – Jueves</span><span>11:00 AM – 9:00 PM</span></div>
+    <div><span data-es="Viernes – Sábado" data-en="Friday – Saturday">Viernes – Sábado</span><span>11:00 AM – 10:00 PM</span></div>
+    <div><span data-es="Domingo" data-en="Sunday">Domingo</span><span>12:00 PM – 9:00 PM</span></div>
+  </div>
+  <p class="dir">📍 4439 Gunn Hwy, Carrollwood, FL 33618<br>
+  📞 <a href="tel:+18133735180">(813) 373-5180</a><br>
+  ✉️ <a href="mailto:Hectorsnypizza@gmail.com">Hectorsnypizza@gmail.com</a></p>
+  <div class="btns">
+    <a class="btn" href="https://www.toasttab.com/local/order/hectorsnypizza" target="_blank" rel="noopener" data-es="🛒 Pide en línea y recoge en tienda" data-en="🛒 Order online & pick up in store">🛒 Pide en línea y recoge en tienda</a>
+    <a class="btn llamar" href="tel:+18133735180" data-es="📞 Llamar" data-en="📞 Call">📞 Llamar</a>
+    <a class="btn alt" href="https://maps.app.goo.gl/zV2WWoWPCMXag2rs6" data-es="📍 Cómo llegar" data-en="📍 Directions">📍 Cómo llegar</a>
+  </div>
+  <div class="social">
+    <a href="https://www.instagram.com/hectorsnypizza/">📸 Instagram</a>
+    <a href="https://www.facebook.com/p/Hectors-NY-Pizza-61560758214509/">📘 Facebook</a>
+  </div>
+</section>
+
+<div class="tricolor"></div>
+<footer>
+  <b>HECTOR'S NY PIZZA</b> · 4439 Gunn Hwy, Carrollwood, FL 33618 · (813) 373-5180<br>
+  <span data-es="Demo de rediseño — New Age Professional Services" data-en="Redesign demo — New Age Professional Services">Demo de rediseño — New Age Professional Services</span>
+</footer>
+
+<div class="barra">
+  <a class="btn" href="https://www.toasttab.com/local/order/hectorsnypizza" target="_blank" rel="noopener" data-es="🛒 Pide en línea y recoge en tienda" data-en="🛒 Order online & pick up in store">🛒 Pide en línea y recoge en tienda</a>
+  <a class="btn llamar" href="tel:+18133735180" data-es="📞 Llamar" data-en="📞 Call">📞 Llamar</a>
+</div>
+
+<script>
+function setLang(l){
+  document.querySelectorAll('[data-es]').forEach(function(el){
+    el.innerHTML = el.getAttribute('data-'+l);
+  });
+  document.documentElement.lang = l;
+  document.getElementById('bEs').classList.toggle('on', l==='es');
+  document.getElementById('bEn').classList.toggle('on', l==='en');
+  try{localStorage.setItem('hectors-lang', l);}catch(e){}
+}
+(function(){try{var l=localStorage.getItem('hectors-lang');if(l==='en')setLang('en');}catch(e){}})();
+</script>
+</body>
+</html>
